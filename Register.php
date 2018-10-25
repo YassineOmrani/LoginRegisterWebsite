@@ -7,7 +7,11 @@
     <?php
         require_once 'init.php'; 
     ?>
-    <form class="js-register" method='POST' action="process.php">
+    <?php 
+             validate_user_registration();
+    ?>
+
+    <form class="js-register" method="post" role="form">
       <div class="form-group">
           <label for="exampleInputEmail1">Name</label>
           <input type="name" class="form-control"  aria-describedby="emailHelp" name="Name" placeholder="Enter name">
@@ -26,13 +30,12 @@
       </div>
       <div class="form-group">
           <label for="exampleInputEmail1">Website</label>
-          <input type="text" class="form-control"  aria-describedby="emailHelp" name="Password" placeholder="Enter website">
+          <input type="text" class="form-control"  aria-describedby="emailHelp" name="Website" placeholder="Enter website">
       </div>
       <div class="js-error alert alert-danger" style="display:none;">
       
       </div>
       <br>
       <button name="submit" type="submit" class="btn btn-primary">register</button>
-      <input type="submit">
 </form>
    <?php include("inc/footer.php"); ?>

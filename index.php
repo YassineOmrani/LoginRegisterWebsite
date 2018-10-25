@@ -5,6 +5,8 @@
     <div class="container text-center" id="container">
         <h2>Hello today is <?php echo date('d'.'/'.'m'.'/20'.'y'); ?></h2>
         <h3>Would you like to <a href="Login.php">Login</a> Or <a href="Register.php">Register</a></h3>
+        <br>
+        <?php   display_message();?>
     </div>
    
 
